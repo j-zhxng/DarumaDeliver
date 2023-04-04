@@ -1,13 +1,57 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+<title class="rounded-3">DarumaDeliver</title>
+    <style>
+        h1.left {
+            line-height: 100px;
+            height: 200px;
+            border: 3px solid purple;
+            text-align: start
+        }
 
-<p>Use this page to detail your site's privacy policy.</p>
+        h1.double {
+            border-style: double;
+            border-width: thick
+        }
+
+        h1 {
+            background-color: black;
+            color: ghostwhite
+        }
+
+        h1 {
+            text-align: start
+        }
+
+        body {
+            background-color: #D22B2B
+        }
+    </style>
+
+    <div class="container container-fluid">
+        <h1 class="double">DarumaDeliver</h1>
+        <img src="https://images.arigatotravel.com/wp-content/uploads/2017/09/06080254/ramen-banner.jpg" class="rounded-3" />
+    </div>
     <div class=" container mt-3">
         <button type="button" class="btn btn-danger btn-lg" onclick="document.location = 'https://localhost:7094/'">Home</button>
         <button type="button" class="btn btn-danger btn-lg" onclick="document.location = 'https://localhost:7094/Home/Shop'">Shop</button>
         <button type="button" class="btn btn-danger btn-lg" onclick="document.location = 'https://localhost:7094/Home/Privacy'">Privacy</button>
         <button type="button" class="btn btn-danger btn-lg" onclick="document.location = 'https://localhost:7094/Home/Contacts'">Contacts</button>
         <button type="button" class="btn btn-danger btn-lg" onclick="document.location = 'https://localhost:7094/Home/About'">About us</button>
-    </div>  
+    </div>
+<h1>@ViewData["Title"]</h1>
+
+<div class="container mt-xl-3 rounded-3" style="background-color:aliceblue; ">
+    <p style="background-color:">We collect personal information from you, including information about your:</p>
+    <p style="outline-color: azure; outline-style:auto; outline-width:3px; background-color:azure;">◊ name</p>
+    <p style="outline-color: azure; outline-style:auto; outline-width:3px; background-color:azure;">◊ location</p>
+    <p style="outline-color: azure; outline-style:auto; outline-width:3px; background-color:azure;">◊ billing or purchase information</p>
+    <p style="outline-color: azure; outline-style:auto; outline-width:3px; background-color:azure;">◊ We collect your personal information in order to:</p>
+    <p> Deliver to you as fast as possible and enhance user experience for long-term use</p>
+   <p> We keep your information safe by storing the data in an encrypted database and only allowing certain staff to use it when you order .</p>
+
+   <p> We keep your information for two years at which point we securely destroy it by securely erasing the data.
+    You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you’d like to ask for a copy of your information, or to have it corrected, please contact us at darumadeliver@gmail.com.</p>
+</div>
+    
