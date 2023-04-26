@@ -65,6 +65,11 @@ span.psw {
     padding-top: 16px;
 }
 
+span.rgs{
+    float:inherit;
+    padding-top: 16px;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -141,3 +146,4 @@ span.psw {
         width: 100%;
     }
 }
+
