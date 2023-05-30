@@ -1,4 +1,14 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using DarumaDeliver.Areas.Identity.Data;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("DarumaDeliverDbContextConnection") ?? throw new InvalidOperationException("Connection string 'DarumaDeliverDbContextConnection' not found.");
+
+builder.Services.AddDbContext<DarumaDeliverDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<DarumaDeliverUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<DarumaDeliverDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -17,8 +27,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",
